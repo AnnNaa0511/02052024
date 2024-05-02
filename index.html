@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Margin Collapse</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="class class1">abc</div>
+    <div class="class class2">xyz</div>
+    <!-- <pre>    hi    hi   hi
+        mkf   fk                j
+    </pre> -->
+    <!-- <span class="class class1">Ô một</span>
+    <span class="class class2">Ô hai</span>
+    <span class="class class3">Ô ba</span> -->
+</body>
+</html>
+
+
+
+<!-- Margin collapse hay còn gọi là sụp đổ lề -->
+<!-- Khi 2 phần từ nằm theo chiều dọc và phần tử trên căn lề dưới(margin-bottom) và phần tử dưới căn lề trên(margin-top) -->
+<!-- Thì 2 lề đó sẽ hợp làm 1(sụp đổ làm 1) và margin sẽ có giá trị là giá trị lớn nhất của 2 lề -->
+<!-- Ví dụ phần tử trên có margin-bottom = 20px và phần tử dưới có margin-top = 50px -->
+<!-- Khi đó lề của 2 phần tử sẽ sụp đổ làm 1 và có giá trị = max(20px, 50px) = 50px -->
+<!-- Margin collapse chỉ xảy ra khi 2 phần tử xếp theo chiều dọc và ko xảy ra đối với 2 phần tử xếp theo chiều ngang -->
+<!-- Ví dụ nếu 2 phần tử xếp theo chiều ngang và phần tử đầu tiên có margin-right = 20px và phần tử tiếp theo có margin-left = 50px -->
+<!-- Khi đó 2 phần tử sẽ cách nhau 70px theo chiều ngang -->
